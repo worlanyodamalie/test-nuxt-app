@@ -1,6 +1,6 @@
 <template>
     <div class="flex flex-wrap justify-center">
-        <article v-for="cardItem in cardItems" :key="cardItem.title" v-tooltip="'This is a card'" class="mw5 pa3 ma4 br3 bg-gray washed-blue">
+        <article v-for="cardItem in cardItems" :key="cardItem.title"  class="mw5 pa3 ma4 br3 bg-gray washed-blue">
             <div class="tc">
                 <img :src="cardItem.image" class="h4 w4 dib ba b--black-05 pa2"  :class="[cardItem.title === 'Cat' ? 'br-100' :  '']">
                 <h1 class="f3">{{cardItem.title}}</h1>
@@ -9,6 +9,11 @@
         </article>    
     </div>
 </template>
+<style>
+ 
+
+
+</style>
 <script>
 export default {
     data(){
