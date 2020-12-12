@@ -13,11 +13,22 @@
 </template>
 <script>
 export default {
-    async asyncData({$http}){
-        const posts = await $http.$get(`https://jsonplaceholder.typicode.com/posts`)
-       return {
-             posts
+    //using nuxt/http for http request
+    // async asyncData({$http}){
+    //     const posts = await $http.$get(`https://jsonplaceholder.typicode.com/posts`)
+    //    return {
+    //          posts
+    //     }
+    // }
+
+    //using nuxt/axios for http requests
+    async asyncData({$axios}){
+        const posts = await $axios.$get(`https://jsonplaceholder.typicode.com/posts`)
+        return {
+            posts
         }
     }
+
+
 }
 </script>
