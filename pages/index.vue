@@ -1,5 +1,7 @@
 <template>
  <div>
+    <!-- <h1>{{title}}</h1> -->
+    <nuxt-link to="/asyncDataTest" > Blog </nuxt-link>
     <nav-header/>
     <quotes/>
     <cards/>
@@ -15,6 +17,9 @@ export default {
      NavHeader,
      Quotes,
      Cards
+   },
+   asyncData (context){
+      return { title: 'async data'}
    } 
 }
 </script>
